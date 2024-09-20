@@ -19,6 +19,11 @@ public class Calculadora {
 		return resultado;
 	}
 	
+	public double dividir(double dividiendo,double divisor) {
+		double resultado;
+		resultado=dividiendo/divisor;
+		return resultado;
+	}
 	
 	
 }
