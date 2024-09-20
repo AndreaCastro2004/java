@@ -25,5 +25,11 @@ public class Calculadora {
 		return resultado;
 	}
 	
+	public double promediar(double valor1,double valor2,double valor3) {
+		double resultadoSuma=valor1+valor2+valor3;
+		double resultado=resultadoSuma/3;
+		return resultado;
+	}
+	
 	
 }
