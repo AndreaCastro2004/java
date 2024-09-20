@@ -1,0 +1,13 @@
+package com.krakedev;
+
+public class TestMensajeria {
+
+	public static void main(String[] args) {
+		Mensajeria mensaje;
+		mensaje=new Mensajeria();
+		mensaje.saludar();
+		
+		mensaje.saludarAmigo("Jose", "Montilo");
+	}
+
+}
