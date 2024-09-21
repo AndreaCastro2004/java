@@ -5,6 +5,7 @@ public class Cuadrado {
 	private int lado;
 	
 	
+	
 	public int getLado() {
 		return lado;
 	}

@@ -7,6 +7,7 @@ public class TestCuadrado {
 		Cuadrado lado2= new Cuadrado();
 		Cuadrado lado3= new Cuadrado();
 		
+		
 		double resultadoAreaLad1;
 		double resultadoPerimetroLad1;
 		double resultadoAreaLad2;
