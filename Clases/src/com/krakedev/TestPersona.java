@@ -8,6 +8,18 @@ public class TestPersona {
 	public static void main(String[] args) {
 		Persona p;// 1.-declaro una variable llamada p de tipo persona
 		Persona p2 = new Persona();
+		Persona p3 = new Persona("Sogia");
+		Persona p4 = new Persona("Maria",12,1.5);
+		
+		System.out.println("nombre:" + p3.getNombre());
+		System.out.println("edad:" + p3.getEdad());
+		System.out.println("estatura:" + p3.getEstatura());
+		
+		System.out.println("nombre:" + p4.getNombre());
+		System.out.println("edad:" + p4.getEdad());
+		System.out.println("estatura:" + p4.getEstatura());
+
+		
 		p = new Persona();// 2.- instancio un objeto persona y lo referencio con p
 
 		p.setNombre("Maria");
