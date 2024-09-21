@@ -1,8 +1,8 @@
 package com.krakedev;
 
 public class Auto {
-	public String marca;
-	public int anio;
-	public double precio;
+	private String marca;
+	private int anio;
+	private double precio;
 
 }
