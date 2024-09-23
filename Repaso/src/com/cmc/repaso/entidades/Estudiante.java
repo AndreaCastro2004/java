@@ -8,6 +8,9 @@ public class Estudiante {
 	public String getNombre() {
 		return nombre;
 	}
+	public String setNombre() {
+		return nombre;
+	}
 	public double getNota() {
 		return nota;
 	}
