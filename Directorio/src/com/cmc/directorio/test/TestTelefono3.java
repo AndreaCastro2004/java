@@ -7,9 +7,9 @@ public class TestTelefono3 {
 
 	public static void main(String[] args) {
 		AdminTelefono al =new AdminTelefono();
-		Telefono tel1=new Telefono("movi","098234234",20);
+		Telefono tel1=new Telefono("mov","098234234",20);
 		Telefono tel2=new Telefono("claro","098234234",20);
-		Telefono tel3=new Telefono("movi","098234234",20);
+		Telefono tel3=new Telefono("mov","098234234",20);
 		String operadora;
 		operadora=al.contarMovi(tel1, tel2, tel3);
 		
