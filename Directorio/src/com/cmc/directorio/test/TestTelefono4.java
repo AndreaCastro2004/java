@@ -15,7 +15,7 @@ public class TestTelefono4 {
 		String operadoraClaro;
 		operadoraClaro=al.contarClaro(tel1, tel2, tel3, tel4);
 		
-		System.out.println("--Cuantas Operadoras Movi Hay--");
+		System.out.println("--Cuantas Operadoras claro Hay--");
 		System.out.println(operadoraClaro);
 	}
 
