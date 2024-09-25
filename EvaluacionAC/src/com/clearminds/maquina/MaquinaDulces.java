@@ -112,13 +112,13 @@ public class MaquinaDulces {
 		return 0;	
 	}
 	public Celda buscarCeldaProducto(String codigoProducto) {
-		if(celda1.getProducto().getCodigo()==codigoProducto) {
+		if(celda1.getProducto()!=null && celda1.getProducto().getCodigo()==codigoProducto) {
 			return celda1;
-		}else if(celda2.getProducto().getCodigo()==codigoProducto) {
+		}else if(celda2.getProducto()!=null && celda2.getProducto().getCodigo()==codigoProducto) {
 			return celda2;
-		}else if(celda3.getProducto().getCodigo()==codigoProducto) {
+		}else if(celda3.getProducto()!=null && celda3.getProducto().getCodigo()==codigoProducto) {
 			return celda3;
-		}else if(celda4.getProducto().getCodigo()==codigoProducto) {
+		}else if(celda4.getProducto()!=null && celda4.getProducto().getCodigo()==codigoProducto) {
 			return celda4;
 		}
 		return null;
