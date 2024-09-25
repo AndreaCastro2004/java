@@ -1,6 +1,7 @@
 package com.clearminds.maquina;
 
 import com.clearminds.componentes.Celda;
+import com.clearminds.componentes.Producto;
 
 public class MaquinaDulces {
 	private Celda celda1;
@@ -33,5 +34,9 @@ public class MaquinaDulces {
 			return celda4;
 		}	
 		return null;
+	}
+	public void cargarProducto(Producto p1,String codigoCelda,int itemns) {	
+		Celda celdaRecuperada=buscarCelda(codigoCelda);
+		celdaRecuperada.ingresarProducto(p1, itemns);
 	}
 }
