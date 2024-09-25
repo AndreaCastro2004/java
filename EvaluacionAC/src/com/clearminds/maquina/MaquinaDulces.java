@@ -125,7 +125,7 @@ public class MaquinaDulces {
 	}
 	public void incrementarProductos(String codigoProducto,int itemns ) {
 		Celda celdaEncontrada=buscarCeldaProducto(codigoProducto);
-		celdaEncontrada.setStock(itemns);
+		celdaEncontrada.setStock(celdaEncontrada.getStock()+itemns);
 	}
 	public void vender(String codigoCelda) {
 		if(celda1.getCodigo()==codigoCelda) {
