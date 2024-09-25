@@ -97,5 +97,50 @@ public class MaquinaDulces {
 		Celda celdaEncontrada=buscarCeldaProducto(codigoProducto);
 		celdaEncontrada.setStock(itemns);
 	}
+	public void vender(String codigoCelda) {
+		if(celda1.getCodigo()==codigoCelda) {
+			celda1.setStock(celda1.getStock()-1);
+
+			double precio=celda1.getProducto().getPrecio();
+			saldo=precio+saldo;
+		}else if(celda2.getCodigo()==codigoCelda) {
+			celda2.setStock(celda2.getStock()-1);
+			
+			double precio=celda2.getProducto().getPrecio();
+			saldo=precio+saldo;
+		}else if(celda3.getCodigo()==codigoCelda) {
+			celda3.setStock(celda3.getStock()-1);
+			
+			double precio=celda3.getProducto().getPrecio();
+			saldo=precio+saldo;
+		}else if(celda4.getCodigo()==codigoCelda) {
+			celda4.setStock(celda4.getStock()-1);
+			
+			double precio=celda4.getProducto().getPrecio();
+			saldo=precio+saldo;
+		}
+		mostrarProducto();
+	}
+	public double venderConCambio(String codigoCelda,double saldo) {
+		if(celda1.getCodigo()==codigoCelda) {
+			celda1.setStock(celda1.getStock()-1);
+			this.saldo=saldo-this.saldo;
+			return this.saldo;
+		}else if(celda2.getCodigo()==codigoCelda) {
+			celda2.setStock(celda2.getStock()-1);	
+			this.saldo=saldo-this.saldo;
+			return this.saldo;
+		}else if(celda3.getCodigo()==codigoCelda) {
+			celda3.setStock(celda3.getStock()-1);
+			this.saldo=saldo-this.saldo;
+			return this.saldo;
+		}else if(celda4.getCodigo()==codigoCelda) {
+			celda4.setStock(celda4.getStock()-1);
+			this.saldo=saldo-this.saldo;
+			return this.saldo;
+		}
+		return 0;
+		
+	}
 	
 }
