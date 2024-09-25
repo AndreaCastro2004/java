@@ -42,22 +42,49 @@ public class MaquinaDulces {
 		Celda celdaRecuperada=buscarCelda(codigoCelda);
 		celdaRecuperada.ingresarProducto(p1, itemns);
 	}
-	public void mostrarProducto() {
-		System.out.println("Codigo de celda1:"+celda1.getCodigo());
-		System.out.println("Stock de celda1:"+celda1.getStock());
-		System.out.println("Nombre de celda1:"+celda1.getProducto().getNombre());
-		System.out.println("Precio de celda1:"+celda1.getProducto().getPrecio());
-		
-		System.out.println("Codigo de celda2:"+celda2.getCodigo());
-		System.out.println("Stock de celda2:"+celda2.getStock());
-		System.out.println("Nombre de celda2:"+celda2.getProducto().getNombre());
-		System.out.println("Precio de celda2:"+celda2.getProducto().getPrecio());
-		
-		System.out.println("Codigo de celda3:"+celda3.getCodigo());
-		System.out.println("Stock de celda3:"+celda3.getStock());
-		System.out.println("Nombre de celda3:"+celda3.getProducto().getNombre());
-		System.out.println("Precio de celda3:"+celda3.getProducto().getPrecio());
-		
+	public void mostrarProductos() {
+		System.out.println("********CELDA A1");
+		if(celda1.getProducto()!=null) {
+			System.out.println("Stock:"+celda1.getStock());
+			System.out.println("Nombre Producto:"+celda1.getProducto().getNombre());
+			System.out.println("Precio Producto:"+celda1.getProducto().getPrecio());
+			System.out.println("Código Producto:"+celda1.getCodigo());
+		}else {
+			System.out.println("Stock:"+celda1.getStock());
+			System.out.println("La celda no tiene producto!!");
+		}
+		System.out.println("********CELDA A2");
+		if(celda2.getProducto()!=null) {
+			System.out.println("Stock de celda2:"+celda2.getStock());
+			System.out.println("Nombre de celda2:"+celda2.getProducto().getNombre());
+			System.out.println("Precio de celda2:"+celda2.getProducto().getPrecio());
+			System.out.println("Codigo de celda2:"+celda2.getCodigo());
+
+		}else {
+			System.out.println("Stock:"+celda2.getStock());
+			System.out.println("La celda no tiene producto!!");
+		}
+		System.out.println("********CELDA B1");
+		if(celda3.getProducto()!=null) {
+			System.out.println("Stock:"+celda3.getStock());
+			System.out.println("Nombre Producto:"+celda3.getProducto().getNombre());
+			System.out.println("Precio Producto:"+celda3.getProducto().getPrecio());
+			System.out.println("Codigo Producto:"+celda3.getProducto().getCodigo());
+		}else {
+			System.out.println("Stock:"+celda2.getStock());
+			System.out.println("La celda no tiene producto!!");
+		}
+		System.out.println("********CELDA B2");
+		if(celda4.getProducto()!=null) {
+			System.out.println("Stock:"+celda4.getStock());
+			System.out.println("Nombre Producto:"+celda4.getProducto().getNombre());
+			System.out.println("Precio Producto:"+celda4.getProducto().getPrecio());
+			System.out.println("Codigo Producto:"+celda4.getCodigo());
+		}else {
+			System.out.println("Stock:"+celda2.getStock());
+			System.out.println("La celda no tiene producto!!");
+		}
+		System.out.println("Saldo:"+saldo);
 	}
 	public Producto buscarProductoEnCelda(String codigoCelda) {
 		if(celda1.getCodigo()==codigoCelda) {
@@ -122,7 +149,7 @@ public class MaquinaDulces {
 			double precio=celda4.getProducto().getPrecio();
 			saldo=precio+saldo;
 		}
-		mostrarProducto();
+		mostrarProductos();
 	}
 	public double venderConCambio(String codigoCelda,double saldo) {
 		if(celda1.getCodigo()==codigoCelda) {
