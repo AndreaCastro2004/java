@@ -69,4 +69,16 @@ public class MaquinaDulces {
 		return null;
 		
 	}
+	public double consultarPrecio(String codigoCelda) {
+		if(celda1.getCodigo()==codigoCelda) {
+			return celda1.getProducto().getPrecio();
+		}else if(celda2.getCodigo()==codigoCelda) {
+			return celda2.getProducto().getPrecio();
+		}else if(celda3.getCodigo()==codigoCelda) {
+			return celda3.getProducto().getPrecio();
+		}else if(celda4.getCodigo()==codigoCelda) {
+			return celda4.getProducto().getPrecio();
+		}
+		return 0;	
+	}
 }
