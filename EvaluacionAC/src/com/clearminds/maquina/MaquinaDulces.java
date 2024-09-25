@@ -10,18 +10,21 @@ public class MaquinaDulces {
 	private Celda celda4;
 	private double saldo;
 	
+	
+
 	//metodos
 	public void configurarMaquina(String codigo1,String codigo2,String codigo3,String codigo4) {
-		celda1.setCodigo(codigo1);
-		celda2.setCodigo(codigo2);
-		celda3.setCodigo(codigo3);
-		celda4.setCodigo(codigo4);
+		 celda1= new Celda(codigo1);
+		 celda2= new Celda(codigo2);
+		 celda3= new Celda(codigo3);
+		 celda4= new Celda(codigo4);
+		
 	}
 	public void mostrarConfiguracion() {
-		System.out.println("Codigo de celda1:"+celda1.getCodigo());
-		System.out.println("Codigo de celda2:"+celda2.getCodigo());
-		System.out.println("Codigo de celda3:"+celda3.getCodigo());
-		System.out.println("Codigo de celda4:"+celda4.getCodigo());
+		System.out.println("CELDA 1:"+celda1.getCodigo());
+		System.out.println("CELDA 2:"+celda2.getCodigo());
+		System.out.println("CELDA 3:"+celda3.getCodigo());
+		System.out.println("CELDA 4:"+celda4.getCodigo());
 	}
 	public Celda buscarCelda(String codigoCelda) {
 		if(celda1.getCodigo()==codigoCelda) {
@@ -141,6 +144,37 @@ public class MaquinaDulces {
 		}
 		return 0;
 		
+	}
+	
+	public Celda getCelda1() {
+		return celda1;
+	}
+	public void setCelda1(Celda celda1) {
+		this.celda1 = celda1;
+	}
+	public Celda getCelda2() {
+		return celda2;
+	}
+	public void setCelda2(Celda celda2) {
+		this.celda2 = celda2;
+	}
+	public Celda getCelda3() {
+		return celda3;
+	}
+	public void setCelda3(Celda celda3) {
+		this.celda3 = celda3;
+	}
+	public Celda getCelda4() {
+		return celda4;
+	}
+	public void setCelda4(Celda celda4) {
+		this.celda4 = celda4;
+	}
+	public double getSaldo() {
+		return saldo;
+	}
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
 	}
 	
 }
