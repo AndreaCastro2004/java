@@ -48,7 +48,7 @@ public class MaquinaDulces {
 			System.out.println("Stock:"+celda1.getStock());
 			System.out.println("Nombre Producto:"+celda1.getProducto().getNombre());
 			System.out.println("Precio Producto:"+celda1.getProducto().getPrecio());
-			System.out.println("Código Producto:"+celda1.getCodigo());
+			System.out.println("Código Producto:"+celda1.getProducto().getCodigo());
 		}else {
 			System.out.println("Stock:"+celda1.getStock());
 			System.out.println("La celda no tiene producto!!");
@@ -58,7 +58,7 @@ public class MaquinaDulces {
 			System.out.println("Stock de celda2:"+celda2.getStock());
 			System.out.println("Nombre de celda2:"+celda2.getProducto().getNombre());
 			System.out.println("Precio de celda2:"+celda2.getProducto().getPrecio());
-			System.out.println("Codigo de celda2:"+celda2.getCodigo());
+			System.out.println("Codigo de celda2:"+celda2.getProducto().getCodigo());
 
 		}else {
 			System.out.println("Stock:"+celda2.getStock());
@@ -79,7 +79,7 @@ public class MaquinaDulces {
 			System.out.println("Stock:"+celda4.getStock());
 			System.out.println("Nombre Producto:"+celda4.getProducto().getNombre());
 			System.out.println("Precio Producto:"+celda4.getProducto().getPrecio());
-			System.out.println("Codigo Producto:"+celda4.getCodigo());
+			System.out.println("Codigo Producto:"+celda4.getProducto().getCodigo());
 		}else {
 			System.out.println("Stock:"+celda2.getStock());
 			System.out.println("La celda no tiene producto!!");
