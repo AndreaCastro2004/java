@@ -39,4 +39,21 @@ public class MaquinaDulces {
 		Celda celdaRecuperada=buscarCelda(codigoCelda);
 		celdaRecuperada.ingresarProducto(p1, itemns);
 	}
+	public void mostrarProducto() {
+		System.out.println("Codigo de celda1:"+celda1.getCodigo());
+		System.out.println("Stock de celda1:"+celda1.getStock());
+		System.out.println("Nombre de celda1:"+celda1.getProducto().getNombre());
+		System.out.println("Precio de celda1:"+celda1.getProducto().getPrecio());
+		
+		System.out.println("Codigo de celda2:"+celda2.getCodigo());
+		System.out.println("Stock de celda2:"+celda2.getStock());
+		System.out.println("Nombre de celda2:"+celda2.getProducto().getNombre());
+		System.out.println("Precio de celda2:"+celda2.getProducto().getPrecio());
+		
+		System.out.println("Codigo de celda3:"+celda3.getCodigo());
+		System.out.println("Stock de celda3:"+celda3.getStock());
+		System.out.println("Nombre de celda3:"+celda3.getProducto().getNombre());
+		System.out.println("Precio de celda3:"+celda3.getProducto().getPrecio());
+		
+	}
 }
