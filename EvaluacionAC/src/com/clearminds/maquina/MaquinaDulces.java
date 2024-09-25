@@ -56,4 +56,17 @@ public class MaquinaDulces {
 		System.out.println("Precio de celda3:"+celda3.getProducto().getPrecio());
 		
 	}
+	public Producto buscarProductoEnCelda(String codigoCelda) {
+		if(celda1.getCodigo()==codigoCelda) {
+			return celda1.getProducto();
+		}else if(celda2.getCodigo()==codigoCelda) {
+			return celda2.getProducto();
+		}else if(celda3.getCodigo()==codigoCelda) {
+			return celda3.getProducto();
+		}else if(celda4.getCodigo()==codigoCelda) {
+			return celda4.getProducto();
+		}	
+		return null;
+		
+	}
 }
