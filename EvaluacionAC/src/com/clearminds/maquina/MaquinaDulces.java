@@ -22,4 +22,16 @@ public class MaquinaDulces {
 		System.out.println("Codigo de celda3:"+celda3.getCodigo());
 		System.out.println("Codigo de celda4:"+celda4.getCodigo());
 	}
+	public Celda buscarCelda(String codigoCelda) {
+		if(celda1.getCodigo()==codigoCelda) {
+			return celda1;
+		}else if(celda2.getCodigo()==codigoCelda) {
+			return celda2;
+		}else if(celda3.getCodigo()==codigoCelda) {
+			return celda3;
+		}else if(celda4.getCodigo()==codigoCelda) {
+			return celda4;
+		}	
+		return null;
+	}
 }
