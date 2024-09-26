@@ -31,7 +31,20 @@ public class AdminPersonas {
 		}
 		
 		return personaEncontrada;
+	}
+	
+	public ArrayList<Persona> buscarMayores(int edad){
+		//mayores comienza con un arreglo vacio osea que si no encuentra ninguno me retorna el arreglo vacio
+		ArrayList<Persona> mayores= new ArrayList<Persona>();
+		Persona elementoPersona=null;
+		for(int i=0;i<personas.size();i++) {
+			elementoPersona=personas.get(i);
+			if(elementoPersona.getEdad()>edad) {
+				mayores.add(elementoPersona);
+			}
+		}
 		
+		return mayores;
 	}
 }
 
