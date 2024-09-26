@@ -19,5 +19,19 @@ public class AdminPersonas {
 			System.out.println("Persona:"+elementoPersona.getNombre()+" "+elementoPersona.getEdad());
 		}
 	}
+	
+	public Persona buscarPorNombre(String nombre) {
+		Persona personaEncontrada=null;
+		Persona elementoPersona=null;
+		for(int i=0;i<personas.size();i++) {
+			elementoPersona=personas.get(i);
+			if(nombre.equals(elementoPersona.getNombre())) {
+				personaEncontrada=elementoPersona;
+			}
+		}
+		
+		return personaEncontrada;
+		
+	}
 }
 
