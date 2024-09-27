@@ -95,9 +95,11 @@ public class MaquinaDulces {
 		Celda elementoEncontrado;
 		for(int i=0;i<celdas.size();i++) {
 			elemento=celdas.get(i);
-			if(codigoProducto.equals(elemento.getCodigo())) {
-				elementoEncontrado=elemento;
-				return elementoEncontrado;
+			if(elemento.getProducto()!=null) {
+				if(codigoProducto.equals(elemento.getProducto().getCodigo())) {
+					elementoEncontrado=elemento;
+					return elementoEncontrado;
+				}
 			}
 		}
 		return null;
