@@ -24,6 +24,21 @@ public class MaquinaDulces {
 		}
 		
 	}
+	
+	public Celda buscarCelda(String codigoCelda) {
+		Celda celdaCodigo;
+		Celda celdaEncontrada=null;
+		for(int i=0;i<celdas.size();i++) {
+			celdaCodigo=celdas.get(i);
+			if(celdaCodigo.getCodigo()==codigoCelda) {
+				celdaEncontrada=celdaCodigo;
+			}
+		}
+		return celdaEncontrada;
+		
+	
+	}
+	
 
 	public ArrayList<Celda> getCeldas() {
 		return celdas;
