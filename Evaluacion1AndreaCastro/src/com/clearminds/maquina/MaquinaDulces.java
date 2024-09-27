@@ -57,8 +57,8 @@ public class MaquinaDulces {
 				System.out.println("Celda:" + elemento.getCodigo() + " " + "Stock:" + elemento.getStock() + " "
 						+ "Sin producto asignado");
 			}
-
 		}
+		System.out.println("Saldo:"+saldo);
 
 	}
 	
