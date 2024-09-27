@@ -8,6 +8,7 @@ import com.clearminds.componentes.Producto;
 public class MaquinaDulces {
 	private ArrayList<Celda> celdas;
 	private double saldo;
+	
 
 	public MaquinaDulces() {
 		celdas = new ArrayList<Celda>();
@@ -60,6 +61,21 @@ public class MaquinaDulces {
 		}
 
 	}
+	
+	
+	public Producto buscarProductoEnCelda(String codigoCelda) {
+		Celda elemento;
+		Celda elementoEncontrado;
+		for(int i=0;i<celdas.size();i++) {
+			elemento=celdas.get(i);
+			if(codigoCelda.equals(elemento.getCodigo())) {
+				elementoEncontrado=elemento;
+				return elementoEncontrado.getProducto();
+			}
+		}
+		return null;
+	}
+	
 
 	public ArrayList<Celda> getCeldas() {
 		return celdas;
