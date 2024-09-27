@@ -135,6 +135,9 @@ public class MaquinaDulces {
 
 				double precio=elemento.getProducto().getPrecio();
 				this.saldo=precio+this.saldo;
+				
+				saldo=saldo-elemento.getProducto().getPrecio();
+				return saldo;
 			}
 		}
 		return 0;
