@@ -51,7 +51,7 @@ public class MaquinaDulces {
 			elemento = celdas.get(i);
 			if (elemento.getProducto() != null) {
 				System.out.println("Celda:" + elemento.getCodigo() + " " + "Stock:" + elemento.getStock() + " "
-						+ "Producto:" + elemento.getProducto().getCodigo() + " " + "Precio:"
+						+ "Producto:" + elemento.getProducto().getNombre() + " " + "Precio:"
 						+ elemento.getProducto().getPrecio());
 			}else {
 				System.out.println("Celda:" + elemento.getCodigo() + " " + "Stock:" + elemento.getStock() + " "
@@ -110,6 +110,8 @@ public class MaquinaDulces {
 		Celda celdaEncontrada=buscarCeldaProducto(codigoProducto);
 		celdaEncontrada.setStock(celdaEncontrada.getStock()+itemns);
 	}
+	
+	
 
 	public ArrayList<Celda> getCeldas() {
 		return celdas;
