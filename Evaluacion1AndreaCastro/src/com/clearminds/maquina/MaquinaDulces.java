@@ -76,6 +76,19 @@ public class MaquinaDulces {
 		return null;
 	}
 	
+	public double consultarPrecio(String codigoCelda) {
+		
+		Celda elemento;
+		Celda elementoEncontrado;
+		for(int i=0;i<celdas.size();i++) {
+			elemento=celdas.get(i);
+			if(codigoCelda.equals(elemento.getCodigo())) {
+				elementoEncontrado=elemento;
+				return elementoEncontrado.getProducto().getPrecio();
+			}
+		}
+		return 0;
+	}
 
 	public ArrayList<Celda> getCeldas() {
 		return celdas;
