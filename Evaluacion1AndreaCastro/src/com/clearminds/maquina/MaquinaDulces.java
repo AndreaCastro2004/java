@@ -19,44 +19,47 @@ public class MaquinaDulces {
 
 	public void mostrarConfiguracion() {
 		Celda elementos;
-		for(int i=0;i<celdas.size();i++) {
-			elementos=celdas.get(i);
-			System.out.println("Celda"+(i+1)+":"+elementos.getCodigo());
+		for (int i = 0; i < celdas.size(); i++) {
+			elementos = celdas.get(i);
+			System.out.println("Celda" + (i + 1) + ":" + elementos.getCodigo());
 		}
-		
+
 	}
-	
+
 	public Celda buscarCelda(String codigoCelda) {
 		Celda celdaCodigo;
-		Celda celdaEncontrada=null;
-		for(int i=0;i<celdas.size();i++) {
-			celdaCodigo=celdas.get(i);
-			if(celdaCodigo.getCodigo()==codigoCelda) {
-				celdaEncontrada=celdaCodigo;
+		Celda celdaEncontrada = null;
+		for (int i = 0; i < celdas.size(); i++) {
+			celdaCodigo = celdas.get(i);
+			if (celdaCodigo.getCodigo() == codigoCelda) {
+				celdaEncontrada = celdaCodigo;
 			}
 		}
 		return celdaEncontrada;
-	
+
 	}
-	public void cargarProducto(Producto p1,String codigoCelda,int itemns) {	
-		Celda celdaRecuperada=buscarCelda(codigoCelda);
+
+	public void cargarProducto(Producto p1, String codigoCelda, int itemns) {
+		Celda celdaRecuperada = buscarCelda(codigoCelda);
 		celdaRecuperada.ingresarProducto(p1, itemns);
 	}
-	
-	
+
 	public void mostrarProductos() {
 		Celda elemento;
-		for(int i=0;i<celdas.size();i++) {
-			elemento=celdas.get(i);
-			System.out.println("Codigo Producto:"+(i+1)+":"+elemento.getProducto().getCodigo());
-			System.out.println("Stock:"+elemento.getStock());
-			System.out.println("Nombre Producto:"+(i+1)+":"+elemento.getProducto().getNombre());
-			System.out.println("Precio Producto:"+(i+1)+":"+elemento.getProducto().getPrecio());
-			
+		for (int i = 0; i < celdas.size(); i++) {
+			elemento = celdas.get(i);
+			if (elemento.getProducto() != null) {
+				System.out.println("Celda:" + elemento.getCodigo() + " " + "Stock:" + elemento.getStock() + " "
+						+ "Producto:" + elemento.getProducto().getCodigo() + " " + "Precio:"
+						+ elemento.getProducto().getPrecio());
+			}else {
+				System.out.println("Celda:" + elemento.getCodigo() + " " + "Stock:" + elemento.getStock() + " "
+						+ "Sin producto asignado");
+			}
+
 		}
-		
+
 	}
-	
 
 	public ArrayList<Celda> getCeldas() {
 		return celdas;
