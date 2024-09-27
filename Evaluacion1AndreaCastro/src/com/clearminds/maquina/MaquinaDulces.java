@@ -7,19 +7,20 @@ import com.clearminds.componentes.Celda;
 public class MaquinaDulces {
 	private ArrayList<Celda> celdas;
 	private double saldo;
-	
+
 	public MaquinaDulces() {
-		celdas= new ArrayList<Celda>();
+		celdas = new ArrayList<Celda>();
 	}
-	
-	public void agregarCelda(String codigo) {
-		Celda celdaCodigo=new Celda(codigo);
-		celdas.add(celdaCodigo);
+
+	public void agregarCelda(Celda codigo) {
+		celdas.add(codigo);
 	}
+
 	public void mostrarConfiguracion() {
-		ArrayList<Celda> celda=new ArrayList<Celda>();
+		Celda elementos;
 		for(int i=0;i<celdas.size();i++) {
-			System.out.println("Celdas:"+celda.get(i));
+			elementos=celdas.get(i);
+			System.out.println("Celda"+(i+1)+":"+elementos.getCodigo());
 		}
 		
 	}
@@ -39,6 +40,5 @@ public class MaquinaDulces {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
-	
-	
+
 }
