@@ -3,6 +3,7 @@ package com.clearminds.maquina;
 import java.util.ArrayList;
 
 import com.clearminds.componentes.Celda;
+import com.clearminds.componentes.Producto;
 
 public class MaquinaDulces {
 	private ArrayList<Celda> celdas;
@@ -35,8 +36,11 @@ public class MaquinaDulces {
 			}
 		}
 		return celdaEncontrada;
-		
 	
+	}
+	public void cargarProducto(Producto p1,String codigoCelda,int itemns) {	
+		Celda celdaRecuperada=buscarCelda(codigoCelda);
+		celdaRecuperada.ingresarProducto(p1, itemns);
 	}
 	
 
