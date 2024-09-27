@@ -6,7 +6,7 @@ public class Producto {
 	private String codigo;
 	
 	//metodo constructor
-	public Producto(String nombre, double precio, String codigo) {
+	public Producto(String codigo,String nombre , double precio) {
 		this.nombre = nombre;
 		this.precio = precio;
 		this.codigo = codigo;
@@ -20,5 +20,25 @@ public class Producto {
 	public void disminuirPrecio(double valorDescuento) {
 		precio=precio-valorDescuento;
 	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public double getPrecio() {
+		return precio;
+	}
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+	public String getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+	
 	
 }
