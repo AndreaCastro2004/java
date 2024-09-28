@@ -10,7 +10,7 @@ public class Estudiante {
 
 	// metodo
 	public void agregarNota(Nota nuevaNota) {
-		
+
 		Nota elementoNota;
 		Materia elementoCodigo = null;
 		for (int i = 0; i < notas.size(); i++) {
@@ -22,37 +22,45 @@ public class Estudiante {
 		}
 	}
 
-	public void modidificarNota(String codigo,double nuevaNota) {
+	public void modidificarNota(String codigo, double nuevaNota) {
 		Materia materia = null;
 		Nota nota;
-		if(codigo.equals(materia.getCodigo())) {
-			for(int i=0;i<notas.size();i++) {
-				nota=notas.get(i);
-				if(nota.getCalificacion() >= 0 && nota.getCalificacion() <= 10) {
+		if (codigo.equals(materia.getCodigo())) {
+			for (int i = 0; i < notas.size(); i++) {
+				nota = notas.get(i);
+				if (nota.getCalificacion() >= 0 && nota.getCalificacion() <= 10) {
 					nota.setCalificacion(nuevaNota);
 				}
 			}
-		}else {
+		} else {
 			System.out.println("No se encontro el codigo ingresado");
 		}
 	}
-	
+
 	public double calcularPromedioNotasEstudiante() {
 		Nota elementoNota;
 		double notaRecuperada;
 		double promedio = 0;
-		for(int i=0;i<notas.size();i++) {
-			elementoNota=notas.get(i);
-			notaRecuperada=elementoNota.getCalificacion();
-			notaRecuperada+=notaRecuperada;
-			promedio=notaRecuperada/notas.size();
+		for (int i = 0; i < notas.size(); i++) {
+			elementoNota = notas.get(i);
+			notaRecuperada = elementoNota.getCalificacion();
+			notaRecuperada += notaRecuperada;
+			promedio = notaRecuperada / notas.size();
 		}
-		
+
 		return promedio;
-		
+
 	}
-	
-	
+
+	public void mostrar() {
+		Nota elementoNota;
+		for (int i = 0; i < notas.size(); i++) {
+			elementoNota = notas.get(i);
+			System.out.println("Nombre:" + nombre + " " + "Apellido:" + apellido + " " + "Cedula:" + cedula + "Nota:"
+					+ elementoNota.getCalificacion());
+		}
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
