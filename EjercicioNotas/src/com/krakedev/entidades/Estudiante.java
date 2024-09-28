@@ -22,6 +22,19 @@ public class Estudiante {
 		}
 	}
 
+	public void modidificarNota(String codigo,double nuevaNota) {
+		Materia materia = null;
+		Nota nota;
+		if(codigo.equals(materia.getCodigo())) {
+			for(int i=0;i<notas.size();i++) {
+				nota=notas.get(i);
+				if(nota.getCalificacion() >= 0 && nota.getCalificacion() <= 10) {
+					nota.setCalificacion(nuevaNota);
+				}
+			}
+		}
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
