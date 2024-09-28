@@ -8,12 +8,20 @@ public class Curso {
 	//metodos
 	public String buscarEstudiantePorCedula(Estudiante estudiante) {
 		Estudiante estudiante1 = new Estudiante();
-		if(estudiante.getCedula().equals(estudiante1.getCedula())) {
-			System.out.println("El estudiante no se encuentra en el curso");
+		for(int i=0;i<estudiantes.size();i++) {
+			estudiante1=estudiantes.get(i);
+			if(estudiante.getCedula().equals(estudiante1.getCedula())) {
+				System.out.println("El estudiante no se encuentra en el curso");
+			}
 		}
 		return null;
-		
-		
+	}
+	
+	public void matricularEstudiantes(Estudiante estudiante) {
+		String buscaEstudiante=buscarEstudiantePorCedula(estudiante);
+		if(buscaEstudiante!=null) {
+			estudiantes.add(estudiante);
+		}
 	}
 
 	public ArrayList<Estudiante> getEstudiantes() {
