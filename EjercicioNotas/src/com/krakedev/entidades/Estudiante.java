@@ -32,8 +32,26 @@ public class Estudiante {
 					nota.setCalificacion(nuevaNota);
 				}
 			}
+		}else {
+			System.out.println("No se encontro el codigo ingresado");
 		}
 	}
+	
+	public double calcularPromedioNotasEstudiante() {
+		Nota elementoNota;
+		double notaRecuperada;
+		double promedio = 0;
+		for(int i=0;i<notas.size();i++) {
+			elementoNota=notas.get(i);
+			notaRecuperada=elementoNota.getCalificacion();
+			notaRecuperada+=notaRecuperada;
+			promedio=notaRecuperada/notas.size();
+		}
+		
+		return promedio;
+		
+	}
+	
 	
 	public String getNombre() {
 		return nombre;
