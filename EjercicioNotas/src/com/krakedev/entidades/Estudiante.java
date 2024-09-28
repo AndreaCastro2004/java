@@ -12,9 +12,10 @@ public class Estudiante {
 	public void agregarNota(Nota nuevaNota) {
 		
 		Nota elementoNota;
+		Materia elementoCodigo = null;
 		for (int i = 0; i < notas.size(); i++) {
 			elementoNota = notas.get(i);
-			if ((elementoNota.getMateria() != nuevaNota.getMateria()) && nuevaNota.getCalificacion() >= 0
+			if ((elementoCodigo.getCodigo() != elementoCodigo.getCodigo()) && nuevaNota.getCalificacion() >= 0
 					&& nuevaNota.getCalificacion() <= 10) {
 				notas.add(nuevaNota);
 			}
