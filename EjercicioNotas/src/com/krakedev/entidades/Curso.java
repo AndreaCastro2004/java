@@ -40,11 +40,17 @@ public class Curso {
 		}
 		promedio = sumaNotas /totalNotas;
 		return promedio;
-		
-		
-		
 	}
 
+	public void mostrar() {
+		Estudiante elementoEstudiante;
+		for (int i = 0; i < estudiantes.size(); i++) {
+			elementoEstudiante = estudiantes.get(i);
+			System.out.println("Nombre:" + elementoEstudiante.getNombre()+ " " + "Apellido:" +elementoEstudiante.getApellido() + " " + "Cedula:" + elementoEstudiante.getCedula() + "Nota:"
+					+ elementoEstudiante.getNotas());
+		}
+
+	}
 	public ArrayList<Estudiante> getEstudiantes() {
 		return estudiantes;
 	}
