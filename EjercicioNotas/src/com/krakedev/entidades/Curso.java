@@ -23,6 +23,27 @@ public class Curso {
 			estudiantes.add(estudiante);
 		}
 	}
+	
+	public double calcularPromedioCurso() {
+		Estudiante estudiante;
+		double sumaNotas = 0;
+		int totalNotas=0;
+		double promedio;
+		
+		for(int i=0;i<estudiantes.size();i++) {
+			estudiante=estudiantes.get(i);
+			for(int j=0;j<estudiante.getNotas().size();j++) {
+				Nota notas=estudiante.getNotas().get(j);
+				sumaNotas+=notas.getCalificacion();
+				totalNotas++;
+			}
+		}
+		promedio = sumaNotas /totalNotas;
+		return promedio;
+		
+		
+		
+	}
 
 	public ArrayList<Estudiante> getEstudiantes() {
 		return estudiantes;

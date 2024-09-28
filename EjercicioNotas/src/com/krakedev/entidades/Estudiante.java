@@ -39,15 +39,17 @@ public class Estudiante {
 
 	public double calcularPromedioNotasEstudiante() {
 		Nota elementoNota;
-		double notaRecuperada;
+		double notaRecuperada = 0;
 		double promedio = 0;
+		double totalNotas=0;
 		for (int i = 0; i < notas.size(); i++) {
 			elementoNota = notas.get(i);
 			notaRecuperada = elementoNota.getCalificacion();
 			notaRecuperada += notaRecuperada;
-			promedio = notaRecuperada / notas.size();
+			totalNotas++;
+			
 		}
-
+		promedio = notaRecuperada /totalNotas;
 		return promedio;
 
 	}
