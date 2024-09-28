@@ -2,7 +2,7 @@ package com.krakedev.entidades;
 
 public class Nota {
 	private Materia materia;
-	private String calificacion;
+	private int calificacion;
 	
 	//metodos
 	public void mostrar() {
@@ -16,10 +16,10 @@ public class Nota {
 	public void setMateria(Materia materia) {
 		this.materia = materia;
 	}
-	public String getCalificacion() {
+	public int getCalificacion() {
 		return calificacion;
 	}
-	public void setCalificacion(String calificacion) {
+	public void setCalificacion(int calificacion) {
 		this.calificacion = calificacion;
 	}
 	
