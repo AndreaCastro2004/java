@@ -31,7 +31,6 @@ public class Curso {
 	
 	public double calcularPromedioCurso() {
 		double PromedioEstudiante = 0;
-		int totalNotas=0;
 		double promedio;
 		
 		for(int i=0;i<estudiantes.size();i++) {
