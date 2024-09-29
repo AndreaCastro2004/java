@@ -8,32 +8,50 @@ public class Estudiante {
 	private String cedula;
 	private ArrayList<Nota> notas;
 
+	public Estudiante(String cedula, String nombre, String apellido) {
+		this.cedula = cedula;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		notas = new ArrayList<Nota>();
+	}
+
 	// metodo
 	public void agregarNota(Nota nuevaNota) {
-
-		Nota elementoNota;
-		Materia elementoCodigo = null;
-		for (int i = 0; i < notas.size(); i++) {
-			elementoNota = notas.get(i);
-			if ((elementoCodigo.getCodigo() != elementoCodigo.getCodigo()) && nuevaNota.getCalificacion() >= 0
-					&& nuevaNota.getCalificacion() <= 10) {
-				notas.add(nuevaNota);
+		String nota1;
+		boolean validar = false;
+		if (notas.size() == 0) {
+			notas.add(nuevaNota);
+		} else {
+			for (int i = 0; i < notas.size(); i++) {
+				nota1 = notas.get(i).getMateria().getCodigo();
+				if (nota1.equals(nuevaNota.getMateria().getCodigo())) {
+					validar = true;
+				}
+			}
+			if (validar = false) {
+				if (nuevaNota.getCalificacion() >= 0 && nuevaNota.getCalificacion() <= 10) {
+					notas.add(nuevaNota);
+				}else {
+					System.out.println("nota incorrecta");
+				}
 			}
 		}
 	}
 
-	public void modidificarNota(String codigo, double nuevaNota) {
-		Materia materia = null;
-		Nota nota;
-		if (codigo.equals(materia.getCodigo())) {
-			for (int i = 0; i < notas.size(); i++) {
-				nota = notas.get(i);
-				if (nota.getCalificacion() >= 0 && nota.getCalificacion() <= 10) {
-					nota.setCalificacion(nuevaNota);
+	public void modificarNota(String codigo, double nuevaNota) {
+		String codigoMateria;
+		boolean codigo1 = false;
+		for (int i = 0; i < notas.size(); i++) {
+			codigoMateria = notas.get(i).getMateria().getCodigo();
+			if (codigo.equals(codigoMateria)) {
+				codigo1 = true;
+				if (nuevaNota >= 0 && nuevaNota <= 10) {
+					notas.get(i).setCalificacion(nuevaNota);
 				}
 			}
-		} else {
-			System.out.println("No se encontro el codigo ingresado");
+		}
+		if (codigo1 == false) {
+			System.out.println("El codigo Ingresado no se encuentra registrado");
 		}
 	}
 
@@ -41,25 +59,22 @@ public class Estudiante {
 		Nota elementoNota;
 		double notaRecuperada = 0;
 		double promedio = 0;
-		double totalNotas=0;
+		double totalNotas = 0;
 		for (int i = 0; i < notas.size(); i++) {
 			elementoNota = notas.get(i);
-			notaRecuperada = elementoNota.getCalificacion();
-			notaRecuperada += notaRecuperada;
+			notaRecuperada = notaRecuperada +elementoNota.getCalificacion();
 			totalNotas++;
-			
+
 		}
-		promedio = notaRecuperada /totalNotas;
+		promedio = notaRecuperada / totalNotas;
 		return promedio;
 
 	}
 
 	public void mostrar() {
-		Nota elementoNota;
-		for (int i = 0; i < notas.size(); i++) {
-			elementoNota = notas.get(i);
-			System.out.println("Nombre:" + nombre + " " + "Apellido:" + apellido + " " + "Cedula:" + cedula + "Nota:"
-					+ elementoNota.getCalificacion());
+		System.out.println("Nombre:" + nombre + " " + "Apellido:" + apellido + " " + "Cedula:" + cedula);
+		for (int j = 0; +j < notas.size(); j++) {
+			notas.get(j).mostrar();
 		}
 	}
 

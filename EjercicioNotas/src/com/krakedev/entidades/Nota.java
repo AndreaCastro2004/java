@@ -4,9 +4,15 @@ public class Nota {
 	private Materia materia;
 	private double calificacion;
 	
+	
+	public Nota(Materia materia, double calificacion) {
+		this.materia=materia;
+		this.calificacion = calificacion;
+	}
+
 	//metodos
 	public void mostrar() {
-		System.out.println("Materia:"+materia.getNombre()+" "+"Calificacion:"+calificacion);
+		System.out.println("Materia:"+materia.getNombre()+" "+"CodigoMateria:"+materia.getCodigo()+"Calificacion:"+calificacion);
 
 	}
 	
