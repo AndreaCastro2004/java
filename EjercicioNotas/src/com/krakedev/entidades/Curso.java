@@ -25,7 +25,7 @@ public class Curso {
 		String buscaEstudiante;
 		buscaEstudiante=buscarEstudiantePorCedula(estudiante);
 		if(buscaEstudiante==null) {
-			estudiantes.add(estudiante);
+ 			estudiantes.add(estudiante);
 		}
 	}
 	
