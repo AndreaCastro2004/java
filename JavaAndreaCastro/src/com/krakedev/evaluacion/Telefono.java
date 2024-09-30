@@ -8,13 +8,19 @@ public class Telefono {
 	
 	
 	public Telefono(String numero, String tipo) {
-		if(numero!=null && tipo!=null) {
+		this.numero = numero;
+		this.tipo = tipo;
+		if(numero!=null && tipo!=null ) {
 			if(tipo.equals("Movil") || tipo.equals("Convencional")) {
 				estado="C";
 				if(tipo.equals("Movil")) {
 					if(numero.length()==10) {
 						this.numero = numero;
 						this.tipo = tipo;
+					}else if(numero.length()<10){
+						this.numero = numero;
+						this.tipo = tipo;
+						estado="E";
 					}
 				}else if(tipo.equals("Convencional")) {
 					if(numero.length()==7) {
@@ -25,7 +31,7 @@ public class Telefono {
 			}else {
 				estado="E";
 			}
-		}else if(numero==null || tipo==null){
+		}else if(numero==null || tipo==null ){
 			estado="E";
 		}
 	}

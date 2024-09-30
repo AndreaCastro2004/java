@@ -44,6 +44,21 @@ public class Contacto {
 			}
 		}
 	}
+	
+	public ArrayList<Telefono> recuperarIncorrectos() {
+		ArrayList<Telefono> lisTelefono = new ArrayList<Telefono>() ;
+		Telefono recTelefono;
+		for(int i=0;i<telefono.size();i++) {
+			recTelefono=telefono.get(i);
+			if(recTelefono.getEstado()=="E") {
+				lisTelefono.add(recTelefono);
+				return lisTelefono;
+			}
+		}
+		
+		return lisTelefono;
+		
+	}
 	// getter and setters
 	public String getCedula() {
 		return cedula;
