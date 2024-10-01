@@ -7,12 +7,16 @@ import java.util.Date;
 public class Directorio {
 	private ArrayList<Contacto> contactos;
 	private Date fechaModificacion;
+	private ArrayList<Contacto> correctos;
+	private ArrayList<Contacto> incorrectos;
 
 	// metodos
 	public Directorio() {
 		contactos = new ArrayList<Contacto>();
 		// Instanciamos fecha
 		fechaModificacion = new Date();
+		correctos = new ArrayList<Contacto>();
+		incorrectos = new ArrayList<Contacto>();
 	}
 
 	public boolean agregarContacto(Contacto contacto) {
@@ -75,6 +79,18 @@ public class Directorio {
 		return aumFijos;
 
 	}
+	public void depurar() {
+		Contacto buscar;
+		for (int i = 0; i < contactos.size(); i++) {
+			buscar = contactos.get(i);
+			if (buscar.getDireccion() == null) {
+				incorrectos.add(buscar);
+			}else {
+				correctos.add(buscar);
+			}
+		}
+		contactos.clear();
+	}
 
 	// getters y setters
 	public ArrayList<Contacto> getContactos() {
@@ -93,4 +109,20 @@ public class Directorio {
 		this.fechaModificacion = fechaModificacion;
 	}
 
+	public ArrayList<Contacto> getCorrectos() {
+		return correctos;
+	}
+
+	public void setCorrectos(ArrayList<Contacto> correctos) {
+		this.correctos = correctos;
+	}
+
+	public ArrayList<Contacto> getIncorrectos() {
+		return incorrectos;
+	}
+
+	public void setIncorrectos(ArrayList<Contacto> incorrectos) {
+		this.incorrectos = incorrectos;
+	}
+	
 }
