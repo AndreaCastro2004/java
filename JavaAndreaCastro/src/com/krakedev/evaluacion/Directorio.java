@@ -41,6 +41,17 @@ public class Directorio {
 			}
 		}
 		return null;
+	}
+	public int contarPerdidos() {
+		Contacto buscar;
+		int aumPerdidos=0;
+		for(int i=0;i<contactos.size();i++) {
+			buscar=contactos.get(i);
+			if(buscar.getDireccion() ==null) {
+				aumPerdidos=aumPerdidos+1;
+			}
+		}
+		return aumPerdidos;
 		
 	}
 	//getters y setters
