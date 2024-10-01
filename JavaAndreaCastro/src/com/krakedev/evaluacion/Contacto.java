@@ -15,6 +15,7 @@ public class Contacto {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		telefono = new ArrayList<Telefono>();
+		
 	}
 
 	// metodos
