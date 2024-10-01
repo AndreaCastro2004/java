@@ -44,6 +44,4 @@ public class Telefono {
 	public String getEstado() {
 		return estado;
 	}
-	
-	
 }
