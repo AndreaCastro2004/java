@@ -6,7 +6,7 @@ public class CalculadoraAmortizacion {
 	public static double calcularCuota(Prestamo prestamo) {
 		Prestamo prestamo1=new Prestamo(prestamo.getMonto(), prestamo.getInteres(), prestamo.getPlazo());
 		//calcular el interes de i
-		double interesMensual=prestamo.getInteres()/12;
+		double interesMensual=prestamo.getInteres()/12;//se mantiene ;
 		double interesPeriodo=interesMensual/100;
 		double dividiendo=0;
 		double divisor=0;
