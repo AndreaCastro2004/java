@@ -3,7 +3,6 @@ package com.servicios;
 import java.util.ArrayList;
 
 import com.entidades.Carta;
-import com.entidades.Jugadores;
 import com.entidades.Naipe;
 
 public class Juego {
