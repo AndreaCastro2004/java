@@ -5,4 +5,5 @@ public class Random {
 		int numeRandom = (int)(Math.random()*51)+1;
 		return numeRandom;
 	}
+
 }

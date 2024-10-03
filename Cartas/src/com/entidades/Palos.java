@@ -8,11 +8,6 @@ public class Palos {
 
 	//metodo constructor
 	public Palos() {
-		Palos palos=new Palos();
-		palos.getCorazonRojo();
-		palos.getCorazonNegro();
-		palos.getDiamante();
-		palos.getTrebol();
 	}
 	
 	//getters and setters
