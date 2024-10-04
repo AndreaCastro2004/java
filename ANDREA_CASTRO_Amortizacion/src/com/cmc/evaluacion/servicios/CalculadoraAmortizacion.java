@@ -31,7 +31,7 @@ public class CalculadoraAmortizacion {
 		cuota1.setSaldo(valores1.getSaldo());
 		prestamo.getCuotas().add(cuota1);
 		for(int i=0;i<prestamo.getCuotas().size();i++) {
-			if(prestamo.getCuotas().size()<=prestamo.getPlazo()) {
+			if(prestamo.getCuotas().size()<=prestamo.getPlazo()-1) {
 				cuota1=new Cuota(i+2);
 				prestamo.getCuotas().add(cuota1);
 				double saldo=prestamo.getCuotas().get(i).getSaldo();
@@ -42,20 +42,23 @@ public class CalculadoraAmortizacion {
 				cuota1.setAbonoCapital(valores1.getAbonoCapital());
 				cuota1.setSaldo(valores1.getSaldo());
 				if(prestamo.getCuotas().size()==prestamo.getPlazo()) {
-					System.out.println("numero" + "  | " + "cuota" + "  | " + "capital" + "  | " + "interes" + "  | " + "abonoCapital"
-							+ "  | " + "saldo"); 
-					for(int j=0;j<prestamo.getCuotas().size();j++) {
-						prestamo.getCuotas().get(j).mostrarPrestamo();
-					}
+					double ultimoSaldo=cuota1.getSaldo();
+					double restandoSaldoPendiente=ultimoSaldo-cuota1.getSaldo();
+					cuota1.setSaldo(restandoSaldoPendiente);
+				}	
 				}
 			}
-		}
+		
 		
 
 	}
 
 	public static void mostrarTabla(Prestamo prestamo) {
-		generarTabla(prestamo);
+		System.out.println("numero" + "  | " + "cuota" + "  | " + "capital" + "  | " + "interes" + "  | " + "abonoCapital"
+				+ "  | " + "saldo"); 
+		for(int j=0;j<prestamo.getCuotas().size();j++) {
+			prestamo.getCuotas().get(j).mostrarPrestamo();
+		}
 	}
 
 	public static Cuota calcularValoresCuota(double interes, double calculadaCuota, double cuota) {//cuota saldo que se va restandodel monto//

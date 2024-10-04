@@ -6,11 +6,9 @@ import com.cmc.evaluacion.entidades.Cliente;
 import com.cmc.evaluacion.entidades.Prestamo;
 
 public class Banco {
-	private ArrayList<Prestamo> prestamos;
 	private ArrayList<Cliente> clientes;
 	
 	public Banco() {
-		prestamos=new ArrayList<Prestamo>();
 		clientes=new ArrayList<Cliente>();
 	}
 	
@@ -43,13 +41,36 @@ public class Banco {
 		
 	}
 	
-	//
-	public ArrayList<Prestamo> getPrestamos() {
-		return prestamos;
+	public void asignarPrestamo(String cedula,Prestamo prestamo) {
+		Cliente buscando;
+		buscando=buscarCliente(cedula);
+		if(buscando==null) {
+			System.out.println("No es cliente de este banco");
+		}else {
+			buscando.getPrestamo().add(prestamo);	
+		}
 	}
+	public ArrayList<Prestamo> buscarPrestamos(String cedula) {
+		ArrayList<Prestamo> prestamoCliente=null;
+		for(int i=0;i<clientes.size();i++) {
+			if(clientes.get(i).getCedula()==cedula) {
+				if(clientes.get(i).getPrestamo()!=null) {
+					prestamoCliente=clientes.get(i).getPrestamo();
+					return prestamoCliente;
+				}
+			}
+			
+		}
+		return prestamoCliente;
+	}
+
 	public ArrayList<Cliente> getClientes() {
 		return clientes;
 	}
+	
+	//
+
+	
 	
 	
 	

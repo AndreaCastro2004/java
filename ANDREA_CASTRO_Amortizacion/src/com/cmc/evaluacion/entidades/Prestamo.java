@@ -15,7 +15,15 @@ public class Prestamo {
 		cuotas=new ArrayList<Cuota>();//las celdas del arrego coresponderan al plazo del prestamo
 	}
 	//metodo
+	public void mostrarPrestamo() {
+		Utilitario redondear = new Utilitario();
+		double monto1=redondear.redondear(monto);
+		double interes1=redondear.redondear(interes);
+		double plazo1=redondear.redondear(plazo);
 	
+		System.out.println(
+				"monto="+monto + "    | "+"interes="+ interes + "    | "+"plazo=" + plazo + "    | ");
+	}
 	//getters and setters
 	public double getMonto() {
 		return monto;
