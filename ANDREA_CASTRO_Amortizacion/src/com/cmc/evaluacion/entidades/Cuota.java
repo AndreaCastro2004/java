@@ -1,6 +1,5 @@
 package com.cmc.evaluacion.entidades;
 
-import java.text.DecimalFormat;
 
 public class Cuota {
 	private int numero;
@@ -22,13 +21,13 @@ public class Cuota {
 		Utilitario redondear = new Utilitario();
 		double numero1=redondear.redondear(numero);
 		double cuota1=redondear.redondear(cuota);
-		double capital1=redondear.redondear(capital);
+		double capital1=redondear.redondear(inicio);
 		double interes1=redondear.redondear(interes);
 		double abonoCapital1=redondear.redondear(abonoCapital);
 		double saldo1=redondear.redondear(saldo);
-
+	
 		System.out.println(
-				numero1 + " | "+ cuota1 + " | " + capital1 + " | " + interes1 + " | " +abonoCapital1 + " | " + saldo);
+				numero1 + "    | "+ cuota1 + "    | " + capital1 + "    | " + interes1 + "    | " +abonoCapital1 + "    | " + saldo1);
 	}
 
 	// getters and setters
