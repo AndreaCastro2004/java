@@ -43,8 +43,8 @@ public class CalculadoraAmortizacion {
 				cuota1.setSaldo(valores1.getSaldo());
 				if(prestamo.getCuotas().size()==prestamo.getPlazo()) {
 					double ultimoSaldo=cuota1.getSaldo();
-					double restandoSaldoPendiente=ultimoSaldo-cuota1.getSaldo();
-					cuota1.setSaldo(restandoSaldoPendiente);
+					double restandoSaldoPendiente=ultimoSaldo+cuota1.getAbonoCapital();
+					cuota1.setCuota(restandoSaldoPendiente);
 				}	
 				}
 			}
