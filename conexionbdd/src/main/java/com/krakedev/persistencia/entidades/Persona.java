@@ -63,9 +63,6 @@ public class Persona {
 	public EstadoCivil getEstadoCivil() {
 		return estadoCivil;
 	}
-	public void setEstadoCivil(EstadoCivil estadoCivil) {
-		this.estadoCivil = estadoCivil;
-	}
 	public int getNumeroHijos() {
 		return numeroHijos;
 	}
