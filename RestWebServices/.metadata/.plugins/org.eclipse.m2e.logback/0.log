@@ -4532,3 +4532,4 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
 	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
 	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
 	... 18 common frames omitted
+2024-10-17 21:39:31,361 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
