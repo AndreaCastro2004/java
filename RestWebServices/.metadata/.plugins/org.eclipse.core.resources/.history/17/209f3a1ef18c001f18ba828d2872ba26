@@ -1,0 +1,23 @@
+package com.krakedev.servicios;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
+import com.krakedev.entidades.Cliente;
+
+
+@Path("customers")//para atar el paht al url
+public class ServicioClientes {
+	@Path("m1")
+	@GET
+	public String saludar() {
+		return "Hola mundo web rest services";
+		
+	}
+	@Path("mbuscar")
+	@GET
+	public Cliente buscar() {
+		Cliente cliente=new Cliente("1234567890","Samon");
+		return cliente;
+	}
+}
