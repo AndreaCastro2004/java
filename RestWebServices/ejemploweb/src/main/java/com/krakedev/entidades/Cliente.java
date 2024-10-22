@@ -7,10 +7,11 @@ public class Cliente {//entidad
 	
 	public Cliente() {}
 	
-	public Cliente(String cedula, String nombre) {
+	public Cliente(String cedula, String nombre,int numeroHijos) {
 		super();
 		this.cedula = cedula;
 		this.nombre = nombre;
+		this.numeroHijos = numeroHijos;
 	}
 	
 	

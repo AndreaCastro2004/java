@@ -25,12 +25,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.krakedev.inventario"/>
 			<item value="com.krakedev.ejemploweb"/>
 		</list>
 		<list key="groupId">
 			<item value="com.krakedev"/>
 		</list>
 		<list key="artifactId">
+			<item value="inventario"/>
 			<item value="ejemploweb"/>
 		</list>
 		<list key="projectNameTemplate">
