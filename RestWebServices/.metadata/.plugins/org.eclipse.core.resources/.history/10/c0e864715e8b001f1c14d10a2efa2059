@@ -1,9 +1,0 @@
-package com.krakedev.servicios;
-
-public class ServicioClientes {
-	public string saludar() {
-
-		return "Hola mundo web rest services";
-		
-	}
-}

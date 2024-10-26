@@ -16,6 +16,7 @@ import javax.ws.rs.core.Response;
 import com.krakedev.entidades.Cliente;
 import com.krakedev.excepciones.KrakeDevException;
 import com.krakedev.persistencia.ClientesBDD;
+import com.krakedev.utils.ConexionBDD;
 
 
 @Path("customers")//para atar el paht al url
@@ -113,4 +114,5 @@ public class ServicioClientes {
 		}
 		
 	}
+	
 }

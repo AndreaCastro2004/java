@@ -25,6 +25,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.krakedev.evaluacion"/>
 			<item value="com.krakedev.inventario"/>
 			<item value="com.krakedev.ejemploweb"/>
 		</list>
@@ -32,6 +33,7 @@
 			<item value="com.krakedev"/>
 		</list>
 		<list key="artifactId">
+			<item value="evaluacion"/>
 			<item value="inventario"/>
 			<item value="ejemploweb"/>
 		</list>
